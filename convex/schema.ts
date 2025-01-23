@@ -37,7 +37,11 @@ export default defineSchema({
     endDate: v.number(),
     maxParticipants: v.number(),
     prizePool: v.optional(v.string()),
-    status: v.union(v.literal("upcoming"), v.literal("active"), v.literal("completed")),
+    status: v.union(
+      v.literal("upcoming"),
+      v.literal("active"),
+      v.literal("completed")
+    ),
     creatorId: v.string(),
     image: v.optional(v.string()),
     technologies: v.array(v.string()),
@@ -53,4 +57,26 @@ export default defineSchema({
   })
     .index("by_hackathon", ["hackathonId"])
     .index("by_user", ["userId"]),
+
+  questions: defineTable({
+    title: v.string(),
+    content: v.string(),
+    userId: v.string(),
+    userName: v.string(),
+    votes: v.number(),
+    answered: v.boolean(),
+    createdAt: v.number(),
+  }),
+  answers: defineTable({
+    questionId: v.id("questions"),
+    content: v.string(),
+    userId: v.string(),
+    userName: v.string(),
+    isMentor: v.boolean(),
+    createdAt: v.number(),
+  }),
+  votes: defineTable({
+    questionId: v.id("questions"),
+    userId: v.string(),
+  }),
 });

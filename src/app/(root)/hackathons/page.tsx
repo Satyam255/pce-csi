@@ -109,7 +109,7 @@
 //                 <div className="p-6">
 //                   <h3 className="text-xl font-semibold mb-2">{hackathon.title}</h3>
 //                   <p className="text-gray-600 mb-4">{hackathon.description}</p>
-                  
+
 //                   <div className="flex items-center gap-2 text-gray-500 mb-2">
 //                     <Calendar size={16} />
 //                     <span>
@@ -117,19 +117,19 @@
 //                       {new Date(hackathon.endDate).toLocaleDateString()}
 //                     </span>
 //                   </div>
-                  
+
 //                   <div className="flex items-center gap-2 text-gray-500 mb-2">
 //                     <Users size={16} />
 //                     <span>Max {hackathon.maxParticipants} participants</span>
 //                   </div>
-                  
+
 //                   {hackathon.prizePool && (
 //                     <div className="flex items-center gap-2 text-gray-500 mb-2">
 //                       <Trophy size={16} />
 //                       <span>Prize Pool: {hackathon.prizePool}</span>
 //                     </div>
 //                   )}
-                  
+
 //                   <div className="flex items-center gap-2 text-gray-500 mb-4">
 //                     <Code2 size={16} />
 //                     <div className="flex flex-wrap gap-2">
@@ -143,7 +143,7 @@
 //                       ))}
 //                     </div>
 //                   </div>
-                  
+
 //                   <button
 //                     onClick={() => handleJoinHackathon(hackathon._id)}
 //                     className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
@@ -173,7 +173,7 @@
 //                     required
 //                   />
 //                 </div>
-                
+
 //                 <div>
 //                   <label className="block text-sm font-medium text-gray-700">Description</label>
 //                   <textarea
@@ -184,7 +184,7 @@
 //                     required
 //                   />
 //                 </div>
-                
+
 //                 <div className="grid grid-cols-2 gap-4">
 //                   <div>
 //                     <label className="block text-sm font-medium text-gray-700">Start Date</label>
@@ -196,7 +196,7 @@
 //                       required
 //                     />
 //                   </div>
-                  
+
 //                   <div>
 //                     <label className="block text-sm font-medium text-gray-700">End Date</label>
 //                     <input
@@ -208,7 +208,7 @@
 //                     />
 //                   </div>
 //                 </div>
-                
+
 //                 <div>
 //                   <label className="block text-sm font-medium text-gray-700">Max Participants</label>
 //                   <input
@@ -220,7 +220,7 @@
 //                     required
 //                   />
 //                 </div>
-                
+
 //                 <div>
 //                   <label className="block text-sm font-medium text-gray-700">Prize Pool</label>
 //                   <input
@@ -231,7 +231,7 @@
 //                     placeholder="e.g., $5000"
 //                   />
 //                 </div>
-                
+
 //                 <div>
 //                   <label className="block text-sm font-medium text-gray-700">Technologies</label>
 //                   <input
@@ -282,6 +282,8 @@ import { api } from "../../../../convex/_generated/api";
 import { useHackathons } from '@/hooks/useHackathons';
 import { PlusCircle, Calendar, Trophy, Users, Code2 } from 'lucide-react';
 import { Id } from '../../../../convex/_generated/dataModel';
+import HackathonCard from '@/components/HackathonCard';
+import { hackathons } from "@/constants";
 
 
 
@@ -387,6 +389,11 @@ export default function App() {
             <h2 className="text-2xl font-bold text-white">Open</h2>
             <button className="text-[#00FF90] hover:opacity-90 transition-opacity">Explore All Hackathons</button>
           </div>
+          {/* <div className="grid gap-6 md:grid-cols-2">
+            {hackathons.map((hackathon, i) => (
+              <HackathonCard key={i} {...hackathon} />
+            ))}
+          </div> */}77
         </div>
 
         {isLoading ? (

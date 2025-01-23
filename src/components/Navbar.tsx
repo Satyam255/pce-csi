@@ -5,6 +5,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import DasboardBtn from "./DasboardBtn";
 import TeamBtn from "./TeamBtn";
 import EventsBtn from "./EventBtn";
+import DoubtsBtn from "./DoubtsBtn";
 
 function Navbar() {
   return (
@@ -22,9 +23,10 @@ function Navbar() {
         </Link>
 
         {/* RIGHT SIDE - ACTIONS */}
-        
+
         <SignedIn>
           <div className="flex items-center space-x-4 ml-auto">
+            <DoubtsBtn />
             <TeamBtn />
             <EventsBtn />
             <DasboardBtn />

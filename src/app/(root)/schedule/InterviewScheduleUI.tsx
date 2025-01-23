@@ -188,7 +188,7 @@ function InterviewScheduleUI() {
                       <SelectItem key={candidate.clerkId} value={candidate.clerkId}>
                         <UserInfo user={candidate} />
                       </SelectItem>
-                    ))} 
+                    ))}
                   </SelectContent>
                 </Select>
               </div>

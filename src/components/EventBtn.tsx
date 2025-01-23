@@ -6,7 +6,7 @@ import { CalendarIcon } from "lucide-react";
 
 function EventsBtn() {
   return (
-    <Link href={"/events/ongoing"}>
+    <Link href={"/hackathons"}>
       <Button className="gap-2 font-medium" size={"sm"}>
         <CalendarIcon className="size-4" />
         Explore  Events

@@ -52,4 +52,45 @@
     })
       .index("by_hackathon", ["hackathonId"])
       .index("by_user", ["userId"]),
-  });
+
+
+      projects: defineTable({
+        name: v.string(),
+        description: v.string(),
+        hackathonId: v.id("hackathons"),
+        teamId: v.id("hackathonParticipants"),
+        githubRepo: v.optional(v.string()),
+        progress: v.number(),
+        status: v.union(
+          v.literal("draft"),
+          v.literal("in-progress"),
+          v.literal("submitted"),
+          v.literal("completed")
+        ),
+        submittedAt: v.optional(v.number()),
+      })
+        .index("by_hackathon", ["hackathonId"])
+        .index("by_team", ["teamId"]),
+    
+      projectVersions: defineTable({
+        projectId: v.id("projects"),
+        versionNumber: v.string(),
+        changelog: v.string(),
+        commitHash: v.string(),
+        submittedAt: v.number(),
+        documentationLink: v.optional(v.string()),
+      })
+        .index("by_project", ["projectId"])
+        .index("by_version", ["versionNumber"]),
+    
+      projectReviews: defineTable({
+        projectId: v.id("projects"),
+        reviewerId: v.string(),
+        score: v.number(),
+        feedback: v.string(),
+        reviewedAt: v.number(),
+      })
+        .index("by_project", ["projectId"])
+        .index("by_reviewer", ["reviewerId"]),
+    });
+

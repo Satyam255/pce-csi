@@ -18,6 +18,7 @@ import type * as hackathon from "../hackathon.js";
 import type * as hackathonParticipants from "../hackathonParticipants.js";
 import type * as http from "../http.js";
 import type * as interviews from "../interviews.js";
+import type * as projects from "../projects.js";
 import type * as questions from "../questions.js";
 import type * as users from "../users.js";
 
@@ -35,6 +36,7 @@ declare const fullApi: ApiFromModules<{
   hackathonParticipants: typeof hackathonParticipants;
   http: typeof http;
   interviews: typeof interviews;
+  projects: typeof projects;
   questions: typeof questions;
   users: typeof users;
 }>;

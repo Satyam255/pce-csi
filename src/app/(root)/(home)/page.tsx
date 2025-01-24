@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import HackathonCard from "@/components/HackathonCard";
 import { hackathons } from "@/constants";
 import HackathonsBtn from "@/components/HackathonBtn";
+import FaqsFooter from "@/components/FaqFooter";
 
 
 
@@ -113,6 +114,7 @@ export default function Home() {
         ))}
       </div>
     </div>
+    <FaqsFooter/>
     </div>
   );
 }

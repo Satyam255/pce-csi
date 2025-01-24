@@ -1,6 +1,30 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
+// Create a new hackathon
+export const createHackathon = mutation({
+  args: {
+    title: v.string(),
+    description: v.string(),
+    startDate: v.number(),
+    endDate: v.number(),
+    maxParticipants: v.number(),
+    prizePool: v.optional(v.string()),
+    image: v.optional(v.string()),
+    technologies: v.array(v.string()),
+  },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) throw new Error("Unauthorized");
+
+    return await ctx.db.insert("hackathons", {
+      ...args,
+      creatorId: identity.subject,
+      status: "upcoming",
+    });
+  },
+});
+
 export const getAllHackathons = query({
   handler: async (ctx) => {
     const identity = await ctx.auth.getUserIdentity();

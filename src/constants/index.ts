@@ -347,5 +347,158 @@ export type QuickActionType = (typeof QUICK_ACTIONS)[number];
       },
     },
   ];
+  export const projects = [
+    {
+      title: "AI-Powered Chatbot",
+      startDate: "2025-01-15",
+      endDate: "2025-02-20",
+      status: "In Progress",
+      technologies: ["Python", "TensorFlow", "React"],
+      team: [
+        { name: "Alice", role: "Team Lead", image: "/placeholder.svg" },
+        { name: "Bob", role: "Developer", image: "/placeholder.svg" },
+        { name: "Charlie", role: "UI/UX Designer", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "E-Commerce Platform",
+      startDate: "2025-02-01",
+      endDate: "2025-03-15",
+      status: "Completed",
+      technologies: ["Node.js", "Express", "MongoDB", "Next.js"],
+      team: [
+        { name: "Dave", role: "Backend Developer", image: "/placeholder.svg" },
+        { name: "Eva", role: "Frontend Developer", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "Health Monitoring App",
+      startDate: "2025-03-10",
+      endDate: "2025-04-30",
+      status: "Planned",
+      technologies: ["Flutter", "Firebase"],
+      team: [
+        { name: "Frank", role: "Mobile Developer", image: "/placeholder.svg" },
+        { name: "Grace", role: "Data Scientist", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "Blockchain Wallet",
+      startDate: "2025-04-01",
+      endDate: "2025-05-15",
+      status: "In Progress",
+      technologies: ["Solidity", "Web3.js", "React"],
+      team: [
+        { name: "Hank", role: "Blockchain Developer", image: "/placeholder.svg" },
+        { name: "Isla", role: "Project Manager", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "IoT Smart Home",
+      startDate: "2025-05-01",
+      endDate: "2025-06-10",
+      status: "Planned",
+      technologies: ["Arduino", "C++", "Node.js"],
+      team: [
+        { name: "Jake", role: "Hardware Engineer", image: "/placeholder.svg" },
+        { name: "Laura", role: "Software Engineer", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "Social Media Analytics Tool",
+      startDate: "2025-06-01",
+      endDate: "2025-07-20",
+      status: "Completed",
+      technologies: ["Python", "Django", "React"],
+      team: [
+        { name: "Mike", role: "Full Stack Developer", image: "/placeholder.svg" },
+        { name: "Nina", role: "Data Analyst", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "Game Development Platform",
+      startDate: "2025-07-15",
+      endDate: "2025-09-01",
+      status: "In Progress",
+      technologies: ["Unity", "C#", "Firebase"],
+      team: [
+        { name: "Olivia", role: "Game Designer", image: "/placeholder.svg" },
+        { name: "Pete", role: "Backend Developer", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "Green Energy Dashboard",
+      startDate: "2025-08-01",
+      endDate: "2025-09-15",
+      status: "Planned",
+      technologies: ["Angular", "Node.js", "MongoDB"],
+      team: [
+        { name: "Quinn", role: "Frontend Developer", image: "/placeholder.svg" },
+        { name: "Rita", role: "Data Scientist", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "Quantum Computing SDK",
+      startDate: "2025-09-10",
+      endDate: "2025-11-01",
+      status: "Planned",
+      technologies: ["Python", "Qiskit"],
+      team: [
+        { name: "Sam", role: "Quantum Researcher", image: "/placeholder.svg" },
+        { name: "Tina", role: "Software Developer", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+    {
+      title: "EdTech Learning Platform",
+      startDate: "2025-10-01",
+      endDate: "2025-12-01",
+      status: "In Progress",
+      technologies: ["React", "Node.js", "PostgreSQL"],
+      team: [
+        { name: "Uma", role: "Frontend Developer", image: "/placeholder.svg" },
+        { name: "Victor", role: "Backend Developer", image: "/placeholder.svg" },
+      ],
+      socialLinks: {
+        github: "#",
+        liveDemo: "#",
+      },
+    },
+  ];
   
   

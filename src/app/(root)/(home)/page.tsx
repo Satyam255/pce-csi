@@ -16,6 +16,7 @@ import HackathonCard from "@/components/HackathonCard";
 import { hackathons } from "@/constants";
 import HackathonsBtn from "@/components/HackathonBtn";
 import FaqsFooter from "@/components/FaqFooter";
+import { Footer } from "@/components/Footer";
 
 
 
@@ -115,6 +116,7 @@ export default function Home() {
       </div>
     </div>
     <FaqsFooter/>
+    <Footer/>
     </div>
   );
 }
